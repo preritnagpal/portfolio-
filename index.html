@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Baloo+Paaji+2:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <section class="main-page" id="home">
+        <div class="main">
+            <nav>
+                <header>
+                    <ul>
+                        <li><a class="experience" onclick="openexpe()">Experience</a></li>
+                        <li><a class="certificate" onclick="opencert()">Certificates</a></li>
+                        <li><a href="#mproject" class="major">Major Project</a></li>
+                        <li><a href="#miproject" class="mini">Mini Project</a></li>
+                        <li><a class="contact" onclick="openBothSections()">Contact</a></li>
+                        <li><a class="resume" href="Prerit_Nagpal_Resume.pdf" download="Prerit_Nagpal_Resume.pdf">Resume<i class="fas fa-download"></i></a></li>
+                    </ul>
+                </header>
+            </nav>
+            <div class="head">
+                <div class="effectname"></div>
+                <div class="name">
+                    <h4>Prerit Nagpal</h4>
+                </div>
+                <div class="effecttitle"></div>
+                <div class="title">
+                    <p>Interactive Front-end Developer</p>
+                </div>
+                <div class="effectabout"></div>
+                <div class="about">
+                    <button onclick="openBothSections()">About Me</button>
+                    <i class="fas fa-arrow-right-long"></i>
+                </div>
+            </div>
+            <div class="social">
+                <ul>
+                    <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="#" class="github"><i class="fab fa-github"></i></a></li>
+                    <li><a href="#" class="instagram"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="socialtext">
+                <div class="link"><p>Linkedin</p></div>
+                <div class="git"><p>Github</p></div>
+                <div class="insta"><p>Instagram</p></div>
+                <div class="twitter"><p>Twitter</p></div>
+            </div>
+            <div class="works">
+                <p><a href="#mproject">Works</a></p>
+                <a href="#mproject">
+                    <i class="fas fa-arrow-down-long"></i>
+                </a>
+            </div>
+
+            <!-- ABOUT DIV START -->
+            <div class="aboutsec">
+                <div class="text"><p>About</p></div>
+                <div class="head">
+                    <h6>About me.</h6>
+                    <p>Interactive Front-end Developer.</p>
+                </div>
+                <div class="intro">
+                    <p>I'm currently pursuing my MCA at Invertis University, 
+                        where I also completed my BCA. I'm passionate about 
+                        <span>frontend development</span> and am honing my skills by building 
+                        a <span>100-project challenge</span> that includes interactive and visually 
+                        appealing <span>web applications</span>. This hands-on journey is allowing 
+                        me to deepen my understanding of web technologies and push the 
+                        boundaries of modern design and development.</p>
+                        <div class="icon">
+                            <ul>
+                                <li class="ht"><a class="htmlicon"><i class="fa-brands fa-html5" ></i></a><p>HTML</p></li>
+                                <li class="cs"><a class="cssicon"><i class="fa-brands fa-css3-alt" ></i></a><p>CSS</p></li>
+                                <li class="js"><a class="jsicon"><i class="fa-brands fa-js"></i></a><p>Javascript</p></li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            <!-- ABOUT DIV END -->
+
+            <!-- CONTACT DIV START -->
+            <div class="contsec">
+                <div class="cross"><i class="fa-solid fa-xmark"></i></div>
+                <div class="head">
+                    <h6>Let's talk.</h6>
+                    <p>New projects, freelance inquiry or even a coffee.</p>
+                </div>
+                <form id="contactForm" onsubmit="SendMail(event)" method="POST">
+                    <label for="name">Name *</label>
+                    <div class="input-container">
+                        <input type="text" id="fullName" name="name" required class="input1">
+                    </div>
+                
+                    <label for="email">Email *</label>
+                    <div class="input-container">
+                        <input type="email" id="email_id" name="email" required>
+                    </div>
+                
+                    <label for="message">Message *</label>
+                    <div class="input-container">
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <div class="conbut">
+                        <button type="submit"><i class="fa-solid fa-paper-plane" style="color: white;"></i><p>Send</p></button>
+                    </div>
+                    <div id="formMessage" style="margin-top: 10px; font-size: 14px;"></div>
+                </form>
+                
+                <div class="contacttext">
+                    <p>Cont</p>
+                </div>
+            </div>
+            <!-- CONTACT DIV END -->
+            
+            <!-- Certificate DIV START -->
+            <div class="certsec">
+                <div class="crosstwo"><i class="fa-solid fa-xmark"></i></div>
+                <div class="head">
+                    <h6>Certificates</h6>
+                </div>
+                <div class="underline"></div>
+                <div class="certy">
+                    <div class="certmain">
+                        <div class="ceone"><img src="certificate/python.png" alt="Image 1"></div>
+                        <div class="cetwo"><img src="certificate/sql.png" alt="Image 2"></div>
+                        <div class="cethree"><img src="certificate/great.png" alt="Image 3"></div>
+                        <div class="cefour"><img src="certificate/html.png" alt="Image 4"></div>
+                    </div>           
+                    <button class="prev" onclick="moveLeft()">❮</button>
+                    <button class="next" onclick="moveRight()">❯</button>
+                </div> 
+            </div>
+            <!-- Certificate DIV END -->
+            
+            <!-- Experience DIV START -->
+            <div class="expesec">
+                <div class="crossthree"><i class="fa-solid fa-xmark"></i></div>
+                <div class="head">
+                    <h6>Experience</h6>
+                </div>
+                <div class="underline"></div>
+                <div class="expimg"></div>
+                <div class="heading">
+                    <h6>Internship - Web Tool Development</h6>
+                    <p><span>Reliance BP Mobility Limited </span> | Jul 2023 – Aug 2023</p>
+                </div>
+                <div class="intro">
+                <p>Successfully completed an internship with Reliance BP Mobility Limited, focusing on the development of a web tool to identify aircraft type based on image analysis. This project combined frontend (HTML, CSS, JavaScript) and backend (C#) technologies, leveraging local storage for efficient data handling. The tool was designed to classify aircraft types and recommend appropriate fuel types (Avgas or Jet), enhancing operational efficiency in aviation fuel management.</p>
+                </div>
+                <div class="skill">
+                    <h6>Skills Acquired from My Internship</h6>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JAVASCRIPT</li>
+                        <li>C#</li>
+                        <li>Backend Integration</li>
+                        <li>Debugging & Testing</li>
+                    </ul>
+                </div>
+                <div class="but">
+                    <a href="https://drive.google.com/file/d/1jiHQLmbJuvUANaaOtT1OY1vkAkXz64KE/view?usp=drive_link"target="_blank">#Offer Letter</a>
+                    <a href='https://drive.google.com/file/d/1j2sxxxiy7IW_kIoQclXA7NiPB2lTNu2u/view?usp=drive_link' target="_blank">#Completion Letter</a>
+                    <a href="">#Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- MAJOR PROJECT START -->
+    
+    <section class="mproject" id="mproject">
+        <div class="main2">
+            <div class="heading">
+                <h4>Major Project</h4>
+                <h5>Latest Works</h5>
+            </div>
+            <div class="proimg">
+                <div class="imgeffect"></div>
+                <div class="numbers">
+                    <p>01</p>
+                </div>
+                <div class="content">
+                    <div class="topic">
+                        <p>Real Time Chat Web Application</p>
+                    </div>
+                    <div class="title">
+                        <p>Technologies used: React Js, Next Js, MongoDB.</p>
+                    </div>
+                    <div class="about">
+                        <button >View</button>
+                        <i class="fas fa-arrow-right-long"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="proimg2">
+                <div class="imgeffect2"></div>
+                <div class="numbers2">
+                    <p>02</p>
+                </div>
+                <div class="content2">
+                    <div class="topic2">
+                        <p>Portfolio</p>
+                    </div>
+                    <div class="title2">
+                        <p>Technologies used: HTML, CSS, Javascript, EmailJS.</p>
+                    </div>
+                    <div class="about2">
+                        <button >View</button>
+                        <i class="fas fa-arrow-right-long"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proimg" id="proimg">
+                <div class="imgeffect"></div>
+                <div class="numbers">
+                    <p>03</p>
+                </div>
+                <div class="content">
+                    <div class="topic">
+                        <p>Photography Website</p>
+                    </div>
+                    <div class="title">
+                        <p>Technologies used: HTML, CSS, Javascript.</p>
+                    </div>
+                    <div class="about">
+                        <button onclick="window.open('https://mayankcaptured.web.app', '_blank');">View</button>
+                        <i class="fas fa-arrow-right-long"></i>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </section>
+
+<!-- MAJOR PROJECT END -->
+
+<!-- MINI PROJECT START -->
+
+    <section class="miproject" id="miproject">
+        <div class="minimain">
+            <div class="heading2">
+                <h4>Innovative Tech Mini Creations</h4>
+                <h5>Web is fun.</h5>
+            </div>
+        <div class="container">
+            <div class="cardiv">
+                <div class="card01">
+                    <div class="imgect"></div>
+                    <div class="text01">
+                        <div class="topic">
+                            <p>Calculator</p>
+                        </div>
+                        <div class="title">
+                            <p>Technologies used: HTML, CSS, Javascript.</p>
+                        </div>
+                        <div class="about">
+                            <button><a href="https://preritnagpal.github.io/Calculator/" target="_blank">View</a></button>
+                            <i class="fas fa-arrow-right-long"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="card02">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Digital Clock</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Digital-Clock/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card03">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Color Flipper</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Color-Flipper/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card04">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Counter</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Counter/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card05">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Dropdown Menu</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Dropdown-Menus/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card06">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Glass Effect</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Glass-Effect/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card07">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Landing Page</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Landing-Page/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card08">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Modal Project</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Modal/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card09">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Preview Coursel</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/review-carousel/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card10">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Questions</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Questions/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card11">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Registration Form</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/registration-form/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card12">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Sidebar</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/sidebar/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card13">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Toggle Navbar</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Toggle-Navbar/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card14">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Menu Project</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Menu/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card15">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Video Project</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/video-background/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card16">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Tabs</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Tabs/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card17">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Countdown Timer</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Iphone-Interface/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card18">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Shining Effect</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/shining-effect/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+                <div class="card19">
+                    <div class="imgect"></div>
+                        <div class="text01">
+                            <div class="topic">
+                                <p>Slider</p>
+                            </div>
+                            <div class="title">
+                                <p>Technologies used: HTML, CSS, Javascript.</p>
+                            </div>
+                            <div class="about">
+                                <button><a href="https://preritnagpal.github.io/Carousels/" target="_blank">View</a></button>
+                                <i class="fas fa-arrow-right-long"></i>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="last">
+                <div class="lastmain">
+                    <div class="refresh">
+                        <div class="logo"></div>
+                        <div class="tap"><a href="#home">Tap</a></div>
+                    </div>
+                    <div class="socials">
+                        <ul>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Github</a></li>
+                            <li><a href="#">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="copy">
+                        <p>&copy; 2024 Prerit Nagpal - Phn 9690058658 - Contact </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </section>
+
+<!-- MINI PROJECT ENDS -->
+
+<div class="back-to-top" id="backToTopButton">
+    <button onclick="scrollToTop()"><i class="fas fa-arrow-up"></i></button>
+</div>
+
+
+<script src="new.js"></script>
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "ihX5nZkLd1mB3P6Fq",
+  });
+})();
+</script>
+    
+</body>
+</html>

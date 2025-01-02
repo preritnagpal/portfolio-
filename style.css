@@ -1,0 +1,1913 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Paaji 2", sans-serif;
+}
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}* 
+body {
+    background-color: white; 
+    overflow-x: hidden; 
+    position: relative;
+    overflow-y: scroll;
+    user-select: none;
+}
+.main-page {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    height: 100vh;
+    background-color: #1c1d25;
+    overflow: hidden;
+    position: relative;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s forwards;
+    z-index: 10;
+}
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+.visible {
+    opacity: 1;
+}
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.main{
+    width: 100vw;
+    height: 100vh;
+    visibility: visible;
+}
+.main.hide{
+    visibility: hidden;
+}
+nav{
+    width: 920px;
+    height: 30px;
+    margin: 2% 31%;
+    position: relative;
+    animation: slideDown 1.5s ease-in-out forwards;
+    animation-delay: 2.2s;
+    top:-50%;
+}
+@keyframes slideDown {
+    from {
+        top:-50%;
+    }
+    to {
+        top: 0;
+    }
+}
+header {
+    width: 955px;
+    height: 30px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 8%;
+}
+header ul li a i{
+    margin-left: 4px;
+    font-size: 15px;
+}
+header ul li a {
+    font-size: 20px;
+    color: #b0b2c3;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    position: relative; /* Ensure ::before is positioned relative to the link */
+}
+
+header ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #f06449;
+    transition: width 0.6s ease, background-color 0.6s ease;
+}
+
+header ul li a:hover::after {
+    width: 100%;
+}
+
+header ul li a.blue::after {
+    width: 0;
+    background-color: rgb(4, 0, 255);
+    left: auto;
+    right:0;
+}
+
+
+/* Hover color change for each link */
+header ul li a:hover {
+    color: white;
+}
+
+
+header img{
+    width: 30px;
+    height: 20px;
+}
+.head{
+    width: 500px;
+    height: 300px;
+    margin:13% 15%;
+    position: relative;
+}
+.head .name{
+    width: 600px;
+    height: 80px;
+}
+.head .name h4{
+    color: white;
+    font-size: 90px;
+    margin-top: -3%;
+}
+.head .effecttitle,
+.head .effectabout,
+.head .effectname{
+    content: '';
+    position: absolute;
+    width: 106%;
+    height: 80.5px;
+    top: 13.5%;
+    right: -6%;
+    background-color: white;
+    transition: width 0.6s ease, background-color 0.6s ease;
+    animation: slideright 0.6s ease-in-out forwards;
+    animation-delay: 2.1s;
+}
+@keyframes slideright {
+    from {
+        width: 106%;
+    }
+    to {
+        width: 0%;
+    }
+}
+.head .effecttitle{
+    top: 45%;
+    height: 30.5px;
+    width: 70%;
+    right: 30%;
+    animation: slideright2 0.6s ease-in-out forwards;
+    animation-delay: 2.2s;
+}
+@keyframes slideright2 {
+    from {
+        width: 70%;
+    }
+    to {
+        width: 0%;
+    }
+}
+.head .effectabout{
+    top: 64.5%;
+    height: 50px;
+    width: 32%;
+    right: 68%;
+    animation: slideright3 0.6s ease-in-out forwards;
+    animation-delay: 2.3s;
+    z-index: 10;
+}
+@keyframes slideright3 {
+    from {
+        width: 32%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+.head .title{
+    width: 800px;
+    height: 50px;
+}
+.head .title p{
+    color: white;
+    font-size: 25px;
+    font-style: italic;
+    margin-top: 6.5%;
+}
+.head .about{
+    display: flex;
+    width: 250px;
+    height: 50px;
+}
+.head .about button {
+    width: 130px;
+    height: 50px;
+    background-color: #f06449;
+    color: white;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    font-size: 20px;
+    margin-top: 5%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.head .about button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 0, 255, 0.789));
+    transition: none;
+    pointer-events: none;
+}
+
+.head .about button:hover::after {
+    animation: shine 0.4s ease-in-out forwards;
+}
+
+.head .about button.remove-hover::after {
+    animation: shineBack 0.4s ease-in-out forwards;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes shineBack {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+
+
+
+
+.head .about i{
+    transform: translateY(-5px); 
+    font-size: 18px;
+    color: white;
+    margin-top: 11.5%;
+    transform: scale(2.2, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+.head .about:hover i{
+    margin-left: 3%;
+}
+.social ul {
+    list-style: none; 
+    text-align: end;
+    margin-top: -31%;
+    margin-right: 3%;
+    opacity: 0;
+    animation: fade 0.4s ease-in-out forwards;
+    animation-delay: 2.4s;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.social li {
+    display: block; 
+    margin: 10px; 
+}
+.social a {
+    color: #b0b2c3;
+    font-size: 24px; 
+    transition: color 0.3s ease;
+}
+.social a:hover {
+    color: white; 
+}
+
+.socialtext{
+    width: 200px;
+    height: 240px;
+    margin-top: -15%;
+    position: absolute;
+    right: 4.8%;
+    overflow: hidden;
+}
+.socialtext .link{
+    width: 76px;
+    height: 40px;
+    position: absolute;
+    right:-40%;
+    top: 10%;
+    transition: right 0.3s ease;
+}
+.socialtext .git{
+    width: 63px;
+    height: 40px;
+    position: absolute;
+    right:-40%;
+    top: 32%;
+    transition: right 0.3s ease;
+}
+.socialtext .insta{
+    width: 90px;
+    height: 40px;
+    position: absolute;
+    right:-45%;
+    top: 54%;
+    transition: right 0.3s ease;
+}
+.socialtext .twitter{
+    width: 65px;
+    height: 40px;
+    position: absolute;
+    right:-40%;
+    top: 76%;
+    transition: right 0.3s ease;
+}
+.socialtext p{
+    font-size: 20px;
+    color: whitesmoke;
+}
+.show-linkedin .link,
+.show-github .git, 
+.show-instagram .insta, 
+.show-twitter .twitter { 
+    right: 6%;
+}
+
+.works {
+    width: 70px;
+    height: 100px;
+    margin: 12% auto;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    animation: fade 0.4s ease-in-out forwards;
+    animation-delay: 2.4s;
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.works a{
+    font-size: 20px;
+    color: #b0b2c3;
+    text-decoration: none;
+}
+
+.works i {
+    font-size: 96px; 
+    color: #b0b2c3;
+    transition: all 0.3s ease-in-out, font-size 0.3s ease-in-out; 
+    margin-top: 10%;
+    transform: scale(0.1, 1);
+}
+.works:hover i {
+    transform: translateY(-5px); 
+    font-size: 40px;
+    color: white;
+    margin-top: 10%;
+    transform: scale(0.5, 1);
+}
+.main .aboutsec{
+    width: 570px;
+    height: 658px;
+    margin-top: -100%;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 12.3%;
+    background-color: whitesmoke;
+    transition: all 0.2s ease-in-out;
+    visibility: hidden;
+}
+.aboutsec .text p{
+    font-size: 235px;
+    font-weight: 700;
+    margin:-11% 14%;
+    color: grey;
+    opacity: 0.2;
+}
+.aboutsec .head{
+    width: 350px;
+    height: 100px;
+    margin-top: -38%;
+    margin-left: 11%;
+}
+.aboutsec .head h6{
+    font-size: 30px;
+}
+.aboutsec .head p{
+    font-size: 19px;
+    line-height: 1;
+}
+.aboutsec .intro{
+    width: 450px;
+    height: 400px;
+    margin-left: 11%;
+    margin-top: -15%;
+}
+.aboutsec .intro p{
+    font-size: 18px;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+.intro span{
+    color: #f06449;
+    font-weight: 600;
+}
+.intro .icon{
+    width: 330px;
+    height: 100px;
+    margin: 5% auto;
+    cursor: pointer;
+}
+.icon ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.icon ul li a i{
+    font-size: 65px;
+}
+.icon ul li a.htmlicon i {
+    color: orange; 
+}
+
+.icon ul li a.cssicon i {
+    color: blue;
+}
+
+.icon ul li a.jsicon {
+    position: relative;
+    display: inline-block;
+}
+
+.icon ul li a.jsicon i {
+    font-size: 65px;
+    position: relative;
+    z-index: 1; /* Ensure the icon is above the background */
+    transition: color 0.3s ease;
+}
+
+.icon ul li a.jsicon::before {
+    content: '';
+    position: absolute;
+    top: 27px;
+    left: 2px;
+    width: 90%;
+    height: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 0; /* Background behind the icon */
+}
+
+.icon ul li a.jsicon::before {
+    background-color: black; /* Black background on hover */
+}
+
+.icon ul li a.jsicon i {
+    color: yellow; /* Change the icon color to yellow on hover */
+}
+
+.icon ul li {
+    position: relative; /* Necessary for absolute positioning of children */
+}
+
+.icon ul li p {
+    position: absolute;
+    opacity: 0; /* This will position the paragraph absolutely within the <li> */
+    margin: -20%; /* Adjust this based on your design needs */
+    transition: margin 0.3s ease; /* Optional: smooth transition */
+}
+
+.icon ul li.ht p {
+    margin-left:8%;
+     /* Adjust this for HTML */
+}
+
+.icon ul li.cs p {
+    margin-left: 16%;
+     /* Adjust this for CSS */
+}
+
+.icon ul li.js p {
+    margin-left: -22%;
+     /* Adjust this for JavaScript */
+}
+
+/* Use the general sibling selector for hover effects */
+.htmlicon:hover + p {
+    margin: 0%;
+    opacity: 1; /* Change margin to 0 on hover of the sibling <a> */
+}
+
+.cssicon:hover + p {
+    margin: 0%;
+    opacity: 1; /* Change margin to 0 on hover of the sibling <a> */
+}
+
+.jsicon:hover + p {
+    margin: 0%;
+    opacity: 1; /* Change margin to 0 on hover of the sibling <a> */
+}
+.certificate a{
+    text-decoration: none;
+}
+
+.main .contsec{
+    width: 570px;
+    height: 658px;
+    margin-top: 0%;
+    border-radius: 5px;
+    position: absolute;
+    margin-left: 49.7%;
+    background-color: #1c1d25;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+.contsec .cross{
+    width: 50px;
+    height: 40px;
+    position: absolute;
+    right: 11%;
+    top: 14%;
+}
+.cross i{
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.cross:hover i{
+    color: #f06449;
+    transform: rotate(180deg);
+}
+.contsec .head{
+    width: 350px;
+    height: 100px;
+    margin-top: 20%;
+    margin-left: 11%;
+    color: white;
+}
+.contsec .head h6{
+    font-size: 26px;
+}
+.contsec .head p{
+    font-size: 16px;
+    line-height: 1;
+}
+.contsec #contactForm {
+    width: 450px;
+    height: auto; /* Changed to auto to fit content dynamically */
+    margin-left: 8%;
+    margin-top: -18%;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+#contactForm label {
+    display: block;
+    margin-bottom: 3px;
+    color: white;
+    margin-left: -1%;
+}
+
+.input-container {
+    position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+    margin-bottom: 10px;
+    margin-left: -1%; /* Space between inputs */
+}
+
+#contactForm input[type="text"],
+#contactForm input[type="email"],
+#contactForm textarea{
+    width: 100%;
+    padding: 5px;
+    color: white;
+    background-color: rgb(22, 22, 22); /* Original background color */
+    border: 1px solid rgb(22, 22, 22); /* Ensure border is also styled */
+    border-radius: 4px;
+    font-size: 15px;
+    resize: vertical;
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    outline: none; /* Remove the default outline */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+#contactForm input[type="text"]:focus,
+#contactForm input[type="email"]:focus,
+#contactForm textarea:focus {
+    background-color: black !important; /* Keep the same background color on focus */
+    border-color: black !important; /* Border color on focus */
+}
+
+.input-container::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -2px; /* Position it just below the input */
+    left: 0;
+    background-color: #f06449; /* Underline color */
+    transition: width 0.3s ease; /* Transition for underline */
+}
+.input-container:hover::after{
+    width: 100%;
+}
+.input-container.blue::after {
+    width: 100%;
+    background-color: rgb(4, 0, 255);
+    left: auto;
+    right:0;
+}
+#contactForm  button {
+    width: 120px;
+    height: 50px;
+    background-color: rgba(4, 0, 255, 0.789);
+    color: white;
+    background: linear-gradient(270deg,rgba(4, 0, 255, 0.789),rgba(4, 0, 255, 0.789));
+    font-size: 18px;
+    margin-top: 4%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    margin-left: -1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6%;
+    border-radius: 5px;
+}
+#contactForm  button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent,  #f06449);
+    transition: none;
+    pointer-events: none;
+}
+
+#contactForm .conbut button:hover::after {
+    animation: shinesend 0.4s ease-in-out forwards;
+}
+
+#contactForm .conbut button.remove-hover::after {
+    animation: shineBacksend 0.4s ease-in-out forwards;
+}
+
+@keyframes shinesend {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes shineBacksend {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.contacttext p{
+    font-size: 230px;
+    font-weight: 700;
+    margin:-35% 19%;
+    color: grey;
+    opacity: 0.2;
+    z-index: 1;
+    position: relative; 
+}
+#formMessage {
+    margin-top: 10px; 
+    font-size: 15px;
+    z-index: 2;
+    position: relative; 
+}
+
+.aboutsec.show, .contsec.show {
+    visibility: visible;
+    margin-top: -58.5%;
+}
+/*section-two*/
+.main .certsec{
+    width: 950px;
+    height: 600px;
+    border-radius: 5px;
+    margin-top: -55%;
+    position: absolute;
+    margin-left: 18%;
+    background-color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+}
+.certsec.show { 
+    visibility: visible;
+    opacity: 1;
+}
+
+.certsec .head{
+    width: 350px;
+    height: 100px;
+    margin: 2% 40%;
+}
+.certsec .head h6{
+    font-size: 30px;
+}
+.certsec .crosstwo{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 5.5%;
+    opacity: 0.3;
+}
+.crosstwo:hover{
+    opacity: 1;
+}
+.certsec .crosstwo i{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.certsec .crosstwo:hover i{
+    color: black;
+    transform: rotate(180deg);
+}
+.underline {
+    border-bottom: 2.5px solid black; 
+    border-radius: 2px;
+    width: 84%;
+    margin-top: -8%; 
+    margin-left: 8%;
+}
+.certy {
+    width: 52.2vw;
+    height: 60vh;
+    position: relative;
+    margin: 2% auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.certmain {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* This will center all items horizontally */
+    gap: 10px; /* Adjust gap between items if needed */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent overflowing content */
+}
+
+.certmain div {
+    flex: 0 0 auto; /* Set fixed width for all divs */
+    height: 50%; /* Default height for non-large elements */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease, height 0.5s ease;
+    position: relative;
+}
+
+.certmain div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional styling for rounded corners */
+}
+
+.certmain div.large {
+    height: 100%; /* Full height for the center element */
+    z-index: 2; /* Ensure it stays on top */
+    transform: scale(1.1); /* Optional scale for emphasis */
+}
+.ceone{
+    position: absolute;
+    right: 19%;
+}
+.cetwo{
+    position: absolute;
+    right: 20.5%;
+}
+.cethree{
+    position: absolute;
+    right: 20%;
+}
+.cefour{
+    position: absolute;
+    right: 17%;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
+
+.main .expesec{
+    width: 950px;
+    height: 600px;
+    border-radius: 5px;
+    margin-top: -55%;
+    position: absolute;
+    margin-left: 18%;
+    background-color: whitesmoke;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+}
+.expesec.show { 
+    visibility: visible;
+    opacity: 1;
+}
+.expesec .head{
+    width: 350px;
+    height: 100px;
+    margin: 2% 40%;
+}
+.expesec .head h6{
+    font-size: 30px;
+}
+.expesec .crossthree{
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    right: 1%;
+    top: 5.5%;
+    opacity: 0.3;
+}
+.crossthree:hover{
+    opacity: 1;
+}
+.expesec .crossthree i{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.expesec .crossthree:hover i{
+    color: black;
+    transform: rotate(180deg);
+}
+.expesec .underline {
+    border-bottom: 2.5px solid black; 
+    border-radius: 2px;
+    width: 88%;
+    margin-top: -8%; 
+    margin-left:3.5%;
+}
+.expimg{
+    width: 350px;
+    height: 250px;
+    position: absolute;
+    left: 7%;
+    top: 16%;
+    background-image: url('image/jio.avif');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.2);
+}
+.expesec .heading{
+    width: 450px;
+    height: 100px;
+    margin: 3% 50%;
+}
+.expesec .heading h6{
+    font-size: 25px;
+}
+.heading p{
+    font-size: 18.5px;
+    line-height: 1;
+}
+.heading span{
+    font-style: italic;
+    margin: 2px;
+}
+.expesec .intro p{
+    width: 400px;
+    height: auto;
+    margin: -5% 50%;
+    text-align: justify;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-size: 17px;
+}
+.expesec .skill{
+    width: 450px;
+    height: 100px;
+    margin: -17.5% 3.2%;
+}
+.expesec .skill h6{
+    font-size: 22px;
+}
+.expesec .skill ul{
+    margin: 0 4%;
+}
+.expesec .but{
+    width: 400px;
+    height: 50px;
+    margin: 24% 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.expesec .but a{
+    text-decoration: none;
+    font-size: 17px;
+}
+.mproject{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    height: max-content;
+    background-color: white;
+    position: relative;
+}
+.main2{
+    width: 100vw;
+    height: max-content;
+}
+.main2 .heading{
+    width: 250px;
+    height: 100px;
+    position: absolute;
+    margin:5% 43.5%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+.heading h4{
+    font-size: 18px;
+    color: #b19386;
+    text-transform: uppercase;
+    margin: 0 18%;
+}
+.heading h5{
+    font-size: 36px;
+    color: black;
+}
+.proimg{
+    width: 900px;
+    height: 450px;
+    border: 0.1px solid rgb(80, 75, 75);
+    margin: 15% auto;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    background-image: url('image/webchat.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.proimg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha for desired transparency */
+    border-radius: 5px; /* Match the border radius of .proimg */
+    z-index: 1;
+}
+.proimg * {
+    position: relative;
+    z-index:2; /* Ensures content stays above the overlay */
+}
+.proimg .imgeffect{
+    width: 0;
+    height: 450px;
+    background-color: rgba(28, 29, 37, 0.8);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    position: absolute; 
+}
+.proimg:hover .imgeffect{
+    width: 900px;
+}
+.proimg .numbers{
+    width: 300px;
+    height: 300px;
+    margin-top: -10%;
+    margin-left: 74%;
+    position: absolute;
+    transition: all 0.4s ease; 
+    opacity: 0; 
+}
+.numbers p{
+    font-size: 250px;
+    margin-top: 0%;
+    font-weight: 500;
+    transition: color 0.5s ease;
+    background: linear-gradient(to bottom, #b0b2c3 10% , white 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.3s ease;
+}
+.proimg:hover .numbers p {
+    background-position: bottom;
+    transition-delay: 0.6s; 
+}
+.proimg:hover .numbers {
+    margin-top: -16%;
+    opacity: 1;
+}
+.proimg .content{
+    width: 600px;
+    height: 210px;
+    margin: 25% 8%;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+.proimg:hover .content{
+    transform: scale(1.02);
+}
+.proimg .content .topic{
+    width: 600px;
+    height: 70px;
+    position: absolute;
+}
+.proimg .content .title{
+    width: 600px;
+    height: 60px;
+    position: absolute;
+    margin-top: 15%;
+}
+.content .topic p{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: 3% 0;
+}
+.content .title p{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: -3% 0;
+}
+.content .about{
+    display: flex;
+    width: 300px;
+}
+.content .about button{
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f06449;
+    color: white;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    font-size: 18px;
+    margin-top: 38%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.content .about button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 0, 255, 0.789));
+    transition: none;
+    pointer-events: none;
+}
+
+.content .about button:hover::after {
+    animation: shin 0.4s ease-in-out forwards;
+}
+
+.content .about button.remove-hover::after {
+    animation: shineack 0.4s ease-in-out forwards;
+}
+
+@keyframes shin {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes shineack {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.content .about i{
+    transform: translateY(-5px); 
+    font-size: 18px;
+    color: white;
+    margin-top: 41%;
+    transform: scale(2.2, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+.content .about:hover i{
+    margin-left: 3%;
+}
+
+/*third-section*/
+
+.proimg2{
+    width: 900px;
+    height: 450px;
+    border: 0.1px solid rgb(80, 75, 75);
+    margin: -6% 16%;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: relative;
+    background-image: url('image/portfolio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.proimg2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust the alpha for desired transparency */
+    border-radius: 5px; /* Match the border radius of .proimg */
+    z-index: 1;
+}
+.proimg2 * {
+    position: relative;
+    z-index:2; /* Ensures content stays above the overlay */
+}
+.proimg2 .imgeffect2{
+    width: 0;
+    height: 450px;
+    background-color: rgba(28, 29, 37, 0.8);
+    border-radius: 5px;
+    transition: width 0.5s ease;
+    position: absolute; 
+}
+.proimg2:hover .imgeffect2{
+    width: 900px;
+}
+.proimg2 .numbers2{
+    width: 300px;
+    height: 300px;
+    margin-top: -10%;
+    margin-left: -1%;
+    position: absolute;
+    transition: all 0.4s ease; 
+    opacity: 0; 
+}
+.numbers2 p{
+    font-size: 250px;
+    margin-top: 0%;
+    font-weight: 500;
+    transition: color 0.5s ease;
+    background: linear-gradient(to bottom, #b0b2c3 10% , white 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: background-position 0.3s ease;
+}
+.proimg2:hover .numbers2 p {
+    background-position: bottom;
+    transition-delay: 0.6s; 
+}
+.proimg2:hover .numbers2 {
+    margin-top: -16%;
+    opacity: 1;
+}
+.proimg2 .content2{
+    width: 600px;
+    height: 210px;
+    margin: 25% 40%;
+    position: relative;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+}
+.proimg2:hover .content2{
+    transform: scale(1.02);
+}
+.proimg2 .content2 .topic2{
+    width: 600px;
+    height: 70px;
+    position: absolute;
+}
+.proimg2 .content2 .title2{
+    width: 600px;
+    height: 60px;
+    position: absolute;
+    margin-top: 15%;
+}
+.content2 .topic2 p{
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: 3% 55%;
+}
+.content2 .title2 p{
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: -3% 0%;
+}
+.content2 .about2{
+    display: flex;
+    width: 300px;
+    margin-left: 55%;
+}
+.content2 .about2 button{
+    width: 110px;
+    height: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f06449;
+    color: white;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    font-size: 18px;
+    margin-top: 38%;
+    margin-right: 10%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.content2 .about2 button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 0, 255, 0.789));
+    transition: none;
+    pointer-events: none;
+}
+
+.content2 .about2 button:hover::after {
+    animation: shin2 0.4s ease-in-out forwards;
+}
+
+.content2 .about2 button.remove-hover::after {
+    animation: shineack2 0.4s ease-in-out forwards;
+}
+
+@keyframes shin2 {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes shineack2 {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.content2 .about2 i{
+    transform: translateY(-5px); 
+    font-size: 18px;
+    color: white;
+    margin-top: 41%;
+    transform: scale(2.2, 0.8);
+    transition: all 0.3s ease-in-out;
+    margin-left: -9%;
+}
+.content2 .about2:hover i{
+    margin-left: -6%;
+}
+#proimg{
+    margin-top: 16%;
+    display: inline-block;
+    margin-bottom: 7%;
+    margin-left: 20.5%;
+    background-image: url('image/photography.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.miproject{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100vw;
+    height: max-content;
+    background-color: white;
+    position: relative;
+}
+.minimain{
+    width: 100vw;
+    height: max-content;
+}
+.heading2{
+    width: 350px;
+    height: 100px;
+    position: absolute;
+    margin:3% 40%;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    z-index: 10;
+}
+.heading2 h4{
+    font-size: 18px;
+    color: #b19386;
+    text-transform: uppercase;
+}
+.heading2 h5{
+    font-size: 36px;
+    color: black;
+    margin: 0 18%;
+}
+
+.last{
+    width: 100vw;
+    height: 420px;
+    background-color: #1c1d25;
+    position: absolute;
+}
+.lastmain{
+    width: 600px;
+    height: 300px;
+    margin: 7% auto ;
+}
+.refresh{
+    width: 200px;
+    height: 80px;
+    margin:0 auto;
+}
+.lastmain .logo{
+    background-image: url('image/logo-white.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
+    margin: 4% auto;
+    cursor: pointer;
+}
+.lastmain .tap a{
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    position: absolute;
+    margin: -4% 7%;
+    transition: all 0.5s ease;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+.refresh:hover .tap a{
+    opacity: 1;
+    margin: -4% 8.5%;
+}
+.lastmain .socials{
+    width: 500px;
+    height: 60px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.lastmain .socials ul{
+    display: flex;
+    list-style: none;  
+    justify-content: space-between;
+}
+.lastmain .socials ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+.lastmain .copy{
+    font-size: 15px;
+    width: 325px;
+    height: 30px;
+    margin: -2% auto;
+    color: white;
+    cursor: pointer;
+}
+
+
+.container {
+    width: 90vw;
+    height: 400px;
+    margin-top: 15%;
+    margin-left: 4.5%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2%;
+}
+
+.cardiv {
+    display: flex;
+    width: calc((320.5px + 25px) * 38); /* Adjust width for 20 cards with gaps */
+    height: 100%;
+    animation: scrollLeft 38s linear infinite; /* Adjust the duration for smooth scrolling */
+    gap: 25px; /* Add gap between cards */
+    animation-play-state: paused;
+}
+
+.cardiv > div {
+    border: 0.1px solid rgb(80, 75, 75);
+    border-radius: 10px;
+    width: 320.5px;
+    height: 400px;
+    flex-shrink: 0; /* Prevents the cards from shrinking */
+    transition: transform 0.2s ease-in-out;
+}
+
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-50% - 10px)); /* Adjust for smooth scrolling */
+    }
+}
+
+/* Stop the animation on hover */
+.cardiv:hover {
+    animation-play-state: paused;
+}
+
+.cardiv > div:nth-of-type(odd) {
+    position: relative;
+}
+
+.cardiv > div:nth-of-type(odd)::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 320.5px; 
+    height: 400px; 
+    background-color: rgba(0, 0, 0, 0.2); 
+    border-radius: 5px; 
+    z-index: 1; 
+} 
+
+.cardiv > div:nth-of-type(odd) * {
+    position: relative; 
+    z-index: 2; /* Ensures content stays above the overlay */ 
+} 
+
+.cardiv > div:nth-of-type(odd) .imgect {
+    width: 320.5px; 
+    height: 400px; 
+    background-color: rgba(28, 29, 37, 0.4); 
+    border-radius: 5px; 
+    transition: top 0.5s ease; /* Transition on top property */ 
+    position: absolute; 
+    top: -500px; /* Start position */ 
+    left: 0;
+} 
+
+.cardiv > div:nth-of-type(odd):hover .imgect {
+    top: 0px;
+}
+
+.cardiv > div:nth-of-type(even) {
+    position: relative;
+}
+
+.cardiv > div:nth-of-type(even)::before {
+    content: ""; 
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 320.5px; 
+    height: 400px; 
+    background-color: rgba(0, 0, 0, 0.25); 
+    border-radius: 5px; 
+    z-index: 1; 
+} 
+
+.cardiv > div:nth-of-type(even) * {
+    position: relative; 
+    z-index: 2; /* Ensures content stays above the overlay */ 
+} 
+
+.cardiv > div:nth-of-type(even) .imgect {
+    width: 320.5px; 
+    height: 400px; 
+    background-color: rgba(28, 29, 37, 0.4); 
+    border-radius: 5px; 
+    transition: top 0.5s ease; /* Transition on top property */ 
+    position: absolute; 
+    top: 500px; /* Start position */ 
+    left: 0;
+} 
+
+.cardiv > div:nth-of-type(even):hover .imgect {
+    top: 0px;
+}
+
+
+.card01 {
+    background-color: #15bbc1;
+    background-image: url('image/cal.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card02 {
+    background-color: black;
+    background-image: url('image/clock.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card03 {
+    background-color:#1a1a2e;
+    background-image: url('image/color.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card04 {
+    background-color: #1A1A40;
+    background-image: url('image/maxresdefault.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card05{
+    background-color: rgb(0, 132, 255);
+    background-image: url('image/dropdown.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card06 {
+    background-color: #1c1d25;
+    background-image: url('image/glass.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card07 {
+    background-color: #3A0080;
+    background-image: url('image/landing.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card08 {
+    background-image: url('image/modal.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card09{
+    background-image: url('image/preview.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card10{
+    background-color: black;
+    background-image: url('image/questions.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card11 {
+    background-color: #1A1A40;
+    background-image: url('image/register.jpeg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card12 {
+    background-color: #0170e8;
+    background-image: url('image/sidebar.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card13 {
+    background-image: url('image/navbar.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card14 {
+    background-color: black;
+    background-image: url('image/menu.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card15 {
+    background-color: black;
+    background-image: url('image/video.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card16 {
+    background-image: url('image/tabs.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card17 {
+    background-image: url('image/timer.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card18 {
+    background-image: url('image/shine.png');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+.card19 {
+    background-color: black;
+    background-image: url('image/slider.jpg');
+    background-size: contain; /* Ensure the entire image fits within the div */
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensure any overflow content is hidden */
+}
+
+.text01{
+    width: 320px;
+    height: 210px;
+    margin: 60% 7%;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+.cardiv:hover .text01{
+    transform: scale(1.02);
+}
+.imgect .text01 .topic{
+    width: 320px;
+    height: 70px;
+    position: absolute;
+}
+.imgect .text01 .title{
+    width: 320px;
+    height: 60px;
+    position: absolute;
+    margin-top: 16%;
+}
+.text01 .topic p{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: 3% 0;
+}
+.text01 .title p{
+    color: white;
+    font-size: 18px;
+    font-weight: 400;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    margin: -3% 0;
+}
+.text01 .about{
+    display: flex;
+    width: 320px;
+}
+.text01 .about button{
+    width: 80px;
+    height: 34px;
+    border: none;
+    border-radius: 2px;
+    background-color: #f06449;
+    background: linear-gradient(270deg, #f06449, #ef3636);
+    margin-top: 6%;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.text01 .about button a{
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+}
+.text01 .about button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, transparent, rgba(4, 0, 255, 0.789));
+    transition: none;
+    pointer-events: none;
+}
+
+.text01 .about button:hover::after {
+    animation: tex 0.4s ease-in-out forwards;
+}
+
+.text01 .about button.remove-hover::after {
+    animation: texback 0.4s ease-in-out forwards;
+}
+
+@keyframes tex {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes texback {
+    0% {
+        left: 100%;
+    }
+    50% {
+        left: 0%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.text01 .about i{
+    transform: translateY(-5px); 
+    font-size: 14px;
+    color: white;
+    margin-top: 9%;
+    transform: scale(2.2, 0.8);
+    transition: all 0.3s ease-in-out;
+}
+.text01 .about:hover i{
+    margin-left: 3%;
+}
+
+/* Button styling */
+.back-to-top {
+    position: fixed;
+    right: 20px; /* Hidden by default */
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    transition: all 0.3s linear;
+}
+
+.back-to-top button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+.back-to-top button:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for the hover text */
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+    top: 90%;
+}
