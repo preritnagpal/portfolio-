@@ -1911,3 +1911,240 @@ button.next {
     opacity: 1;
     top: 90%;
 }
+
+@media only screen and (max-width: 380px){
+
+    
+    .last{
+        height: 210px;
+    }
+    .lastmain{
+        width: 380px;
+        height: 180px;
+    }
+    .lastmain .logo{
+        width: 50px;
+        height: 50px;
+        margin-left: 30%;
+    }
+    .lastmain .tap a{
+        font-size: 16px;
+    }
+    .lastmain .socials{
+        width: 280px;
+        margin-left: 9%;
+    }
+    .lastmain .socials ul li a{
+        font-size: 16px;
+    }
+    .lastmain .copy{
+        font-size: 12px;
+        width: 260px;
+        margin-top: -6% ;
+        margin-left:12.5% ;
+    }
+
+
+
+    .heading2{
+        margin:3% 9%;
+    }
+    .heading2 h4{
+        font-size: 16px;
+    }
+    .heading2 h5{
+        font-size: 30px;
+        color: black;
+        margin: 0 17%;
+    }
+    
+    .container {
+        width: 85vw;
+        height: 150px;
+        margin-top: 30%;
+        margin-left: 4%;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 2%;
+    }
+    .cardiv {
+        width: calc((150.5px + 25px) * 38);
+    }
+    
+    .cardiv > div {
+        width: 150.5px;
+        height: 150px;
+    }
+    
+    .text01{
+        width: 150px;
+        margin: 30% 7%;
+    }
+    .cardiv:hover .text01{
+        transform: scale(1.01);
+    }
+    .text01 .topic p{
+        font-size: 15px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
+    .text01 .title p{
+        font-size: 12px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+    }
+    .text01 .about{
+        display: flex;
+        width: 320px;
+    }
+    .text01 .about button{
+        width: 45px;
+        height: 25px;
+        margin-top: 2.5%;
+    }
+    .text01 .about button a{
+        font-size: 12px;
+    }
+    .text01 .about i{
+        font-size: 10px;
+        margin-top: 5%;
+    }
+
+    .main2 .heading{
+        margin:5% 18%;
+    }
+    .heading h4{
+        font-size: 16px;
+    }
+    .heading h5{
+        font-size: 30px;
+        margin-left: 5%;
+    }
+
+    .proimg{
+        width: 82vw;
+        height: 200px;
+        margin: 35% 5.5%;
+    }
+    .proimg .imgeffect{
+        width: 0;
+        height: 200px;
+    }
+    .proimg:hover .imgeffect{
+        width: 82vw;
+    }
+    .proimg .numbers{
+        margin-top: -20%;
+        margin-left: 66%;
+    }
+    .numbers p{
+        font-size: 100px;
+    }
+    .proimg:hover .numbers {
+        margin-top: -22%;
+    }
+    .proimg .content{
+        margin: 20% 8%;
+    }
+    .proimg .content .title{
+        width: 300px;
+        margin: 10% -1%;
+    }
+    .content .topic p{
+        font-size: 20px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        margin: 1% -2%;
+    }
+    .content .title p{
+        font-size: 16px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        margin: -8% -2%;
+    }
+    .content .about button{
+        width: 70px;
+        height: 30px;
+        font-size: 14px;
+        margin: 31% -4%;
+    }
+    .content .about i{
+        font-size: 13px;
+        margin: 33% 3%;
+    }
+    .content2 .about2:hover i{
+        margin-left: 5%;
+    }
+    #proimg{
+        margin:35% 5.5%;
+        margin-bottom: 7%;
+    }
+    #proimg .content .topic p{
+        margin: 6% -2%;
+    }
+    #proimg .content .title p{
+        margin: 1% -2%;
+    }
+    
+    /*third-section*/
+    
+    .proimg2{
+        width: 82vw;
+        height: 200px;
+        margin: -20% 5.5%;
+    }
+
+    .proimg2 .imgeffect2{
+        width: 0;
+        height: 200px;
+    }
+    .proimg2:hover .imgeffect2{
+        width: 82vw;
+    }
+    .proimg2 .numbers2{
+        margin-top: -20%;
+        margin-left: 2%;
+    }
+    .numbers2 p{
+        font-size: 100px;
+    }
+    .proimg2:hover .numbers2 {
+        margin-top: -22%;
+    }
+    .proimg2 .content2{
+        margin: 10% 15%;
+    }
+    .proimg2 .content2 .title2{
+        width: 250px;
+        margin: 13% 5%;
+    }
+    .content2 .topic2 p{
+        font-size: 20px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        margin: 7% 27%;
+    }
+    .content2 .title2 p{
+        font-size: 16px;
+        word-spacing: 0px;
+        letter-spacing: 0px;
+        margin: -3% 2%;
+    }
+    .content2 .about2{
+        margin-left: 25%;
+    }
+    .content2 .about2 button{
+        width: 70px;
+        height: 30px;
+        font-size: 14px;
+        margin-top: 42%;
+    }
+    .content2 .about2 i{
+        font-size: 13px;
+        margin-top: 44%;
+        margin-left: -11%;
+    }
+    .content2 .about2:hover i{
+        margin-left: -9%;
+    }
+}
