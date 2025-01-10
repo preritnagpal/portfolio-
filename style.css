@@ -1912,20 +1912,25 @@ button.next {
     top: 90%;
 }
 
-@media only screen and (max-width: 380px){
-
+@media screen and (max-width: 380px){
+    body {
+        overflow-x: hidden;
+    }
+    
     
     .last{
         height: 210px;
     }
     .lastmain{
-        width: 380px;
+        width: 100%;
+        max-width: 380px;
         height: 180px;
     }
     .lastmain .logo{
-        width: 50px;
-        height: 50px;
-        margin-left: 30%;
+        width: 13vw;
+        height: 13vw;
+        margin-left: auto;
+        margin-right: auto;
     }
     .lastmain .tap a{
         font-size: 16px;
@@ -1943,7 +1948,6 @@ button.next {
         margin-top: -6% ;
         margin-left:12.5% ;
     }
-
 
 
     .heading2{
@@ -2024,7 +2028,7 @@ button.next {
     .proimg{
         width: 82vw;
         height: 200px;
-        margin: 35% 5.5%;
+        margin: 10% auto;
     }
     .proimg .imgeffect{
         width: 0;
