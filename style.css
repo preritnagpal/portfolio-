@@ -1912,32 +1912,27 @@ button.next {
     top: 90%;
 }
 
-@media screen and (max-width: 380px){
-    body {
-        overflow-x: hidden;
-    }
-    
+@media screen and (max-width: 376px){
+
     
     .last{
         height: 210px;
     }
     .lastmain{
-        width: 100%;
-        max-width: 380px;
+        width: 380px;
         height: 180px;
     }
     .lastmain .logo{
-        width: 13vw;
-        height: 13vw;
-        margin-left: auto;
-        margin-right: auto;
+        width: 50px;
+        height: 50px;
+        margin-left: 35%;
     }
     .lastmain .tap a{
         font-size: 16px;
     }
     .lastmain .socials{
         width: 280px;
-        margin-left: 9%;
+        margin-left: 13%;
     }
     .lastmain .socials ul li a{
         font-size: 16px;
@@ -1946,12 +1941,13 @@ button.next {
         font-size: 12px;
         width: 260px;
         margin-top: -6% ;
-        margin-left:12.5% ;
+        margin-left:15.5% ;
     }
 
 
+
     .heading2{
-        margin:3% 9%;
+        margin:3% 13%;
     }
     .heading2 h4{
         font-size: 16px;
@@ -1963,7 +1959,7 @@ button.next {
     }
     
     .container {
-        width: 85vw;
+        width: 92vw;
         height: 150px;
         margin-top: 30%;
         margin-left: 4%;
@@ -2015,7 +2011,7 @@ button.next {
     }
 
     .main2 .heading{
-        margin:5% 18%;
+        margin:5% 22%;
     }
     .heading h4{
         font-size: 16px;
@@ -2026,9 +2022,9 @@ button.next {
     }
 
     .proimg{
-        width: 82vw;
+        width: 85vw;
         height: 200px;
-        margin: 10% auto;
+        margin: 35% 7.5%;
     }
     .proimg .imgeffect{
         width: 0;
@@ -2080,7 +2076,8 @@ button.next {
         margin-left: 5%;
     }
     #proimg{
-        margin:35% 5.5%;
+        width: 85vw;
+        margin:35% 7.5%;
         margin-bottom: 7%;
     }
     #proimg .content .topic p{
@@ -2093,9 +2090,9 @@ button.next {
     /*third-section*/
     
     .proimg2{
-        width: 82vw;
+        width: 85vw;
         height: 200px;
-        margin: -20% 5.5%;
+        margin: -20% 7.5%;
     }
 
     .proimg2 .imgeffect2{
